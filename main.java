@@ -1,10 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.EventListener;
 
 public class main{
 
+
    public static void main(String[] args){
       
+int startButtonWidth = 100;
+int startButtonHeight = 50;
+
       JFrame frame = new JFrame();
       frame.setTitle("Typeracer");
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -15,8 +20,10 @@ public class main{
 
       JButton start = new JButton();
       start.setText("Start!");
-      start.setBounds(frame.getWidth() / 2 , frame.getHeight(), 100, 50);
+      start.setBounds((frame.getWidth() / 2) - (startButtonWidth / 2) , (frame.getHeight() / 2) - (startButtonHeight / 2) , startButtonWidth, startButtonHeight);
       frame.add(start);
+
+      
 
 
 
