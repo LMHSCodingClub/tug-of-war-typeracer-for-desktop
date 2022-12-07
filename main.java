@@ -3,16 +3,45 @@ import java.awt.*;
 
 public class main{
 
-   public static void main(String [] args){
+   public static void main(String[] args){
       
       JFrame frame = new JFrame();
       frame.setTitle("Typeracer");
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+      frame.setSize(500, 500);
       frame.setVisible(true);
-      frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
-      frame.getContentPane().setBackground(Color.BLUE);
+      frame.getContentPane().setBackground(Color.white);
+      frame.setLayout(null);
+
+      JButton start = new JButton();
+      start.setText("Start!");
+      start.setBounds(frame.getWidth() / 2 , frame.getHeight(), 100, 50);
+      frame.add(start);
+
+
+
+      ImageIcon carImage = new ImageIcon("carImage.png");
+
+      JLabel car = new JLabel();
+      car.setIcon(carImage);
+      car.setBounds(frame.getWidth() / 2, frame.getHeight() / 2 , 250, 250);
+      frame.add(car);
+
+
+
+
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      /*
       ImageIcon advertisement = new ImageIcon("codingClubAdd.png");
       
       JLabel ad = new JLabel();
@@ -31,6 +60,8 @@ public class main{
       
       frame.add(ad);
       frame.add(text);
+
+      */
       
       
    }
