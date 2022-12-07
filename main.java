@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.util.EventListener;
 
 public class main{
@@ -11,28 +12,35 @@ int startButtonWidth = 100;
 int startButtonHeight = 50;
 
       JFrame frame = new JFrame();
-      frame.setTitle("Typeracer");
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      frame.setSize(500, 500);
-      frame.setVisible(true);
-      frame.getContentPane().setBackground(Color.white);
-      frame.setLayout(null);
-
-      JButton start = new JButton();
-      start.setText("Start!");
-      start.setBounds((frame.getWidth() / 2) - (startButtonWidth / 2) , (frame.getHeight() / 2) - (startButtonHeight / 2) , startButtonWidth, startButtonHeight);
-      frame.add(start);
-
       
-
-
 
       ImageIcon carImage = new ImageIcon("carImage.png");
 
       JLabel car = new JLabel();
       car.setIcon(carImage);
       car.setBounds(frame.getWidth() / 2, frame.getHeight() / 2 , 250, 250);
-      frame.add(car);
+      
+
+      JButton start = new JButton();
+      start.setText("Start!");
+      start.setBounds((frame.getWidth() / 2) - (startButtonWidth / 2) , (frame.getHeight() / 2) - (startButtonHeight / 2) , startButtonWidth, startButtonHeight);
+      start.addActionListener(null);
+      frame.add(start);
+
+      @Override
+      public void actionPerformed(ActionEvent e){
+            if(e.getSource() == start){
+               frame.add(car);
+            }
+
+      }
+
+      
+
+
+
+      
+   
 
 
 
