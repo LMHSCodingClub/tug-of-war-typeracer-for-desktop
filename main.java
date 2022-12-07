@@ -29,8 +29,6 @@ public class main{
       text.setOpaque(true);
       
       
-      
-      
       frame.add(ad);
       frame.add(text);
       
